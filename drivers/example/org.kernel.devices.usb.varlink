@@ -1,0 +1,20 @@
+# The USB Device Interface allows to retrieve device information,
+# enumerate, and monitor USB devices.
+interface org.kernel.devices.usb
+
+type Device (
+  vendor_id: int,
+  product_id: int,
+  bus_nr: int,
+  device_nr: int,
+  product: string,
+  manufacturer: string,
+  serial: string
+)
+
+# Retrieve information about the specified USB device.
+method Info(bus_nr: int, device_nr: int) -> (device: Device)
+
+# Retrieve the list of connected USB devices and monitor devices
+# which are added and removed from the system.
+method Monitor() -> (event: string, devices: Device[])

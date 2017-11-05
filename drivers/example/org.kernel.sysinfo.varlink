@@ -1,0 +1,14 @@
+# The System Information Interface retrieves the hostname
+# and other properties of the currently running kernel.
+interface org.kernel.sysinfo
+
+# Return the system name, nodename, release, version, domainname of
+# the current kernel.
+method GetInfo() -> (
+  sysname: string,
+  nodename: string,
+  release: string,
+  version: string,
+  machine: string,
+  domainname: string
+)
