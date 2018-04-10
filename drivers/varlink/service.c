@@ -121,11 +121,6 @@ static int org_varlink_service_GetInfo(struct varlink_connection *connection,
 		goto out;
 
 	for (i = 0; i < service->n_ifaces; i++) {
-		const char *name = service->ifaces[i]->name;
-
-		if (strcmp(name, "org.varlink.service") == 0)
-			continue;
-
 		r = json_array_append_string(ifaces, service->ifaces[i]->name);
 		if (r < 0)
 			goto out;

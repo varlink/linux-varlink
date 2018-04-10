@@ -17,4 +17,4 @@ method Info(bus_nr: int, device_nr: int) -> (device: Device)
 
 # Retrieve the list of connected USB devices and monitor devices
 # which are added and removed from the system.
-method Monitor() -> (event: string, devices: Device[])
+method Monitor() -> (event: string, devices: []Device)
