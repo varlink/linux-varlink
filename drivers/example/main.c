@@ -2,6 +2,7 @@
 #include <linux/json.h>
 #include <linux/module.h>
 #include <linux/mutex.h>
+#include <linux/slab.h>
 #include <linux/usb.h>
 #include <linux/utsname.h>
 #include <linux/varlink.h>
